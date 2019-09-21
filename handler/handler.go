@@ -63,7 +63,7 @@ func encryption(s string) string {
 		case "m":
 			sl[i] = "µ"
 		case "n":
-			sl[i] = "ˇ"
+			sl[i] = "Ø"
 		case "o":
 			sl[i] = "ø"
 		case "p":
@@ -151,10 +151,10 @@ func encryption(s string) string {
 
 func decryption(s string) string {
 	sl := strings.Split(s, "")
-	len := len(sl)
+	length := len(sl)
 	var cipher string
 
-	for i := 0; i < len; i++ {
+	for i := 0; i < length; i++ {
 		switch sl[i] {
 		case "å":
 			sl[i] = "a"
@@ -182,8 +182,6 @@ func decryption(s string) string {
 			sl[i] = "l"
 		case "µ":
 			sl[i] = "m"
-		case "￿ˇ":
-			sl[i] = "n￿"
 		case "ø":
 			sl[i] = "o"
 		case "π":
@@ -262,6 +260,10 @@ func decryption(s string) string {
 			sl[i] = ","
 		case "≥":
 			sl[i] = "."
+		case " ":
+			sl[i] = "\n"
+		case "Ø":
+			sl[i] = "n"
 		}
 		cipher += sl[i]
 	}
