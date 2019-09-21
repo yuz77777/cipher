@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <form action="encrypted/" method="post">
+        暗号化したい文を入力してください<br>
+        <textarea name="encrypt-text" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="暗号化"><input type="reset" value="リセット"><br>
+        ※使える文字は小文字のアルファベット・数字・@・K・#・%・&・[・]・(・)・?・!・-・+・=・~・,・. のみです
+    </form>
+</div>
+<div>
+    <form action="decrypted/" method="post">
+        復号化したい文を入力してください<br>
+        <textarea name="decrypt-text" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="復号化"><input type="reset" value="リセット"><br>
+        ※復号化できるのはこのサイトで暗号化した文のみです
+    </form>
+</div>
+</body>
+</html>
