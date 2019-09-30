@@ -1,6 +1,8 @@
 package internal
 
-import "strings"
+import (
+	"strings"
+)
 
 func Decryption(s string) string {
 	sl := strings.Split(s, "")
@@ -64,6 +66,31 @@ func Decryption(s string) string {
 		52: ",",
 		53: ".",
 		54: " ",
+		55: "A",
+		56: "B",
+		57: "C",
+		58: "D",
+		59: "E",
+		60: "F",
+		61: "G",
+		62: "H",
+		63: "I",
+		64: "J",
+		65: "L",
+		66: "M",
+		67: "N",
+		68: "O",
+		69: "P",
+		70: "Q",
+		71: "R",
+		72: "S",
+		73: "T",
+		74: "U",
+		75: "V",
+		76: "W",
+		77: "X",
+		78: "Y",
+		79: "Z",
 	}
 	stoi := map[string]int{
 		"å": 0,
@@ -120,6 +147,31 @@ func Decryption(s string) string {
 		"≤": 51,
 		"≥": 52,
 		"◊": 53,
+		"♠": 54,
+		"♣": 55,
+		"♥": 56,
+		"♦": 57,
+		"∝": 58,
+		"ℜ": 59,
+		"ν": 60,
+		"ξ": 61,
+		"δ": 62,
+		"ψ": 63,
+		"ℵ": 64,
+		"ℑ": 65,
+		"Λ": 66,
+		"Ψ": 67,
+		"κ": 68,
+		"℘": 69,
+		"≅": 70,
+		"∈": 71,
+		"Ε": 72,
+		"÷": 73,
+		"η": 74,
+		"⇐": 75,
+		"↔": 76,
+		"λ": 77,
+		"↵": 78,
 	}
 
 	for i := 0; i < length; i++ {
@@ -127,8 +179,8 @@ func Decryption(s string) string {
 			key = stoi[sl[0]]
 		} else {
 			falseID = stoi[sl[i]]
-			idNumber := falseID + 54 - key
-			idNumber %= 54
+			idNumber := falseID + 79 - key
+			idNumber %= 79
 
 			sl[i] = itos[idNumber]
 			text += sl[i]
