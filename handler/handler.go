@@ -33,7 +33,7 @@ func DecryptionPostHandler(c *gin.Context) {
 func EncryptionApiHandler(c *gin.Context) {
 	text := c.Query("text")
 	text = encryption.Encryption(text)
-	m := map[string]string{"Encrypted text": text}
+	m := map[string]string{"encrypted_text": text}
 
 	c.JSON(200, m)
 }
@@ -41,7 +41,7 @@ func EncryptionApiHandler(c *gin.Context) {
 func DecryptionApiHandler(c *gin.Context) {
 	text := c.Query("text")
 	text = decryption.Decryption(text)
-	m := map[string]string{"Decrypted text": text}
+	m := map[string]string{"decrypted_text": text}
 
 	c.JSON(200, m)
 }
