@@ -10,8 +10,11 @@ func main() {
 	r.LoadHTMLGlob("views/templates/*.html")
 
 	r.GET("/", handler.IndexHandler)
-	r.POST("encrypted/", handler.EncryptedPostHandler)
+	r.POST("encrypted/", handler.EncryptionPostHandler)
 	r.POST("decrypted/", handler.DecryptionPostHandler)
+
+	r.GET("api/encryption/", handler.EncryptionApiHandler)
+	r.GET("api/decryption/", handler.DecryptionApiHandler)
 
 	r.Run()
 }
