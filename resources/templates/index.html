@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>暗号・復号化</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+<body>
+<div>
+    <h1>暗号化したい文を入力してください</h1><br>
+    <textarea id="encrypt-text" cols="30" rows="10"></textarea><br>
+    <button id="encryption">暗号化</button>
+    <input type="reset" value="リセット">
+    <p id="encrypted-text"></p>
+    <p>※使える文字はアルファベット・数字・%・&・[]・()・?・!・-・+・=・~・,・. です</p>
+</div>
+<div>
+    <h1>復号化したい文を入力してください</h1><br>
+    <textarea id="decrypt-text" cols="30" rows="10"></textarea><br>
+    <button id="decryption">復号化</button>
+    <input type="reset" value="リセット">
+    <p id="decrypted-text"></p>
+    <p>※復号化できるのはこのサイトで暗号化した文のみです</p>
+</div>
+<script src="../assets/scripts/script.js"></script>
+</body>
+</html>
