@@ -1,9 +1,10 @@
 const encryption_button = document.getElementById('encryption');
 const decryption_button = document.getElementById('decryption');
+const url = window.location.href;
 
 encryption_button.onclick = () => {
     const encrypt_text = document.getElementById('encrypt-text').value;
-    fetch(`http://localhost:8080/api/encryption?text=${encrypt_text}`)
+    fetch(`${url}api/encryption?text=${encrypt_text}`)
         .then(res => {
             return res.json();
         })
@@ -18,7 +19,7 @@ encryption_button.onclick = () => {
 
 decryption_button.onclick = () => {
     const decrypt_text = document.getElementById('decrypt-text').value;
-    fetch(`http://localhost:8080/api/decryption?text=${decrypt_text}`)
+    fetch(`${url}api/decryption?text=${decrypt_text}`)
         .then(res => {
             return res.json();
         })
