@@ -1,20 +1,5 @@
-.main {
-  height: 400px;
-  margin: 50px;
-}
-
-.header {
-  background-color: #9370db;
-  font-size: 30px;
-  height: 40px;
-  padding: 35px;
-  color: white;
-  font-family: "HiraKakuPro-W6", fantasy;
-}
-
-.main textarea {
-  width: 80%;
-  height: 100px;
+body {
+  margin: 0;
 }
 
 h1 {
@@ -30,15 +15,34 @@ a {
   color: white;
 }
 
+textarea {
+  font-size: 120%;
+}
+
+.main {
+  height: 400px;
+  margin: 50px;
+}
+
+.main textarea {
+  width: 80%;
+  height: 100px;
+}
+
+.header {
+  background-color: #9370db;
+  font-size: 30px;
+  height: 40px;
+  padding: 35px;
+  color: white;
+  font-family: "HiraKakuPro-W6", fantasy;
+}
+
 .footer {
   background-color: #483d8b;
   font-size: 15px;
   padding: 20px;
   height: 20px;
-}
-
-textarea {
-  font-size: 120%;
 }
 
 .content {
