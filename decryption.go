@@ -91,6 +91,10 @@ func Decryption(s string) string {
 		77: "X",
 		78: "Y",
 		79: "Z",
+		80: "'",
+		81: "\"",
+		82: "{",
+		83: "}",
 	}
 	stoi := map[string]int{
 		"å": 0,
@@ -172,6 +176,10 @@ func Decryption(s string) string {
 		"↔": 76,
 		"λ": 77,
 		"↵": 78,
+		"¾": 79,
+		"ý": 80,
+		"¦": 81,
+		"Ð": 82,
 	}
 
 	for i := 0; i < length; i++ {
@@ -179,8 +187,8 @@ func Decryption(s string) string {
 			key = stoi[sl[0]]
 		} else {
 			falseID = stoi[sl[i]]
-			idNumber := falseID + 79 - key
-			idNumber %= 79
+			idNumber := falseID + 83 - key
+			idNumber %= 83
 
 			sl[i] = itos[idNumber]
 			text += sl[i]

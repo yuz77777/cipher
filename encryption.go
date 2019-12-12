@@ -93,6 +93,10 @@ func Encryption(s string) string {
 		"X": 77,
 		"Y": 78,
 		"Z": 79,
+		"'": 80,
+		"\"": 81,
+		"{": 82,
+		"}": 83,
 	}
 	itos := map[int]string{
 		0:  "å",
@@ -174,15 +178,19 @@ func Encryption(s string) string {
 		76: "↔",
 		77: "λ",
 		78: "↵",
+		79: "¾",
+		80: "ý",
+		81: "¦",
+		82: "Ð",
 	}
 
 	rand.Seed(time.Now().UnixNano())
-	key := rand.Intn(78)
+	key := rand.Intn(82)
 
 	for i := 0; i < len; i++ {
 		idNumber = stoi[sl[i]]
 		idNumber += key
-		idNumber %= 79
+		idNumber %= 83
 		sl[i] = itos[idNumber]
 		cipher += sl[i]
 	}
