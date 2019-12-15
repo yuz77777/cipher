@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 10vh;
 }
 
 h1 {
@@ -42,7 +43,7 @@ textarea {
   background-color: #483d8b;
   font-size: 15px;
   padding: 20px;
-  height: 20px;
+  height: 100%;
 }
 
 .content {
