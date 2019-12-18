@@ -1,5 +1,7 @@
 const encryption_button = document.getElementById('encryption');
 const decryption_button = document.getElementById('decryption');
+const encrypted_text = document.getElementById('encrypted-text');
+const decrypted_text = document.getElementById('decrypted-text');
 const url = window.location.href;
 
 encryption_button.onclick = () => {
@@ -9,8 +11,8 @@ encryption_button.onclick = () => {
             return res.json();
         })
         .then(json => {
-            document.getElementById('encrypted-text').innerHTML = json.encrypted_text;
-            console.log(json.encrypted_text);
+            encrypted_text.style.color = 'black';
+            encrypted_text.innerHTML = json.encrypted_text;
         })
         .catch(err => {
             console.error(err);
@@ -24,8 +26,8 @@ decryption_button.onclick = () => {
             return res.json();
         })
         .then(json => {
-            document.getElementById('decrypted-text').innerHTML = json.decrypted_text;
-            console.log(json.decrypted_text);
+            decrypted_text.style.color = 'black';
+            decrypted_text.innerHTML = json.decrypted_text;
         })
         .catch(err => {
             console.error(err)

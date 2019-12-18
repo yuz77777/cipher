@@ -16,10 +16,6 @@ a {
   color: white;
 }
 
-textarea {
-  font-size: 120%;
-}
-
 .main {
   height: 400px;
   margin: 50px;
@@ -28,6 +24,7 @@ textarea {
 .main textarea {
   width: 80%;
   height: 100px;
+  font-size: 120%;
 }
 
 .header {
@@ -61,5 +58,47 @@ textarea {
 }
 
 .result {
-  color: black;
+  color: #91989F;
+  font-size: 25px;
+}
+
+@media (max-width: 650px) {
+  body {
+    margin: 0px;
+    height: 10vh;
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+
+  .main {
+   padding-top: 30px;
+   font-size: 15px;
+   margin: 0;
+   width:170%;
+   height: 900px;
+ }
+ 
+ .main textarea {
+  width: 94%;
+ }
+ 
+ .de h1 {
+   padding-top: 0px;
+ }
+ 
+ .content {
+   padding: 0px 50px;
+   margin: 0;
+ }
+
+ .footer {
+   height:30px;
+ }
+ 
+  #encrypt-text {
+    margin: 10px 0px 0px 0px;
+  }
+  
 }
