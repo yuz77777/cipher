@@ -1,104 +1,120 @@
 body {
-  margin: 0;
-  height: 10vh;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
 }
 
 h1 {
-  font-size: 33px;
-  font-family: "Hiragino Kaku Gothic Std", fantasy;
+    font-size: 33px;
+    font-family: "Hiragino Kaku Gothic Std", fantasy;
 }
 
 p {
-  color: #91989F;
+    color: #91989F;
 }
 
 a {
-  color: white;
+    color: white;
 }
 
 .main {
-  height: 400px;
-  margin: 50px;
+    height: 400px;
+    margin: 50px;
+    flex: 1;
 }
 
 .main textarea {
-  width: 80%;
-  height: 100px;
-  font-size: 120%;
+    width: 80%;
+    height: 100px;
+    font-size: 120%;
 }
 
 .header {
-  background-color: #9370db;
-  font-size: 30px;
-  height: 40px;
-  padding: 35px;
-  color: white;
-  font-family: "HiraKakuPro-W6", fantasy;
+    background-color: #9370db;
+    font-size: 30px;
+    height: 40px;
+    padding: 35px;
+    color: white;
+    font-family: "HiraKakuPro-W6", fantasy;
 }
 
 .footer {
-  background-color: #483d8b;
-  font-size: 15px;
-  padding: 20px;
-  height: 100%;
+    background-color: #483d8b;
+    font-size: 20px;
+    padding: 35px;
+    height: 100px;
+    margin-top: auto;
 }
 
 .content {
-  width: 40%;
-  float: left;
-  margin: 20px;
+    width: 40%;
+    float: left;
+    margin: 20px;
 }
 
 .en {
-  padding-left: 40px;
+    padding-left: 40px;
 }
 
 .de {
-  padding-left: 80px;
+    padding-left: 80px;
 }
 
 .result {
-  color: #91989F;
-  font-size: 25px;
+    color: #91989F;
+    font-size: 25px;
+}
+
+@media (max-width: 1100px) {
+    .content {
+        clear: both;
+        padding: 0;
+        margin: auto;
+        width: 100%;
+    }
 }
 
 @media (max-width: 650px) {
-  body {
-    margin: 0px;
-    height: 10vh;
-  }
-  
-  h1 {
-    font-size: 30px;
-  }
+    body {
+        margin: 0;
+        height: 10vh;
+    }
 
-  .main {
-   padding-top: 30px;
-   font-size: 15px;
-   margin: 0;
-   width:170%;
-   height: 900px;
- }
- 
- .main textarea {
-  width: 94%;
- }
- 
- .de h1 {
-   padding-top: 0px;
- }
- 
- .content {
-   padding: 0px 50px;
-   margin: 0;
- }
+    h1 {
+        font-size: 30px;
+    }
 
- .footer {
-   height:30px;
- }
- 
-  #encrypt-text {
-    margin: 10px 0px 0px 0px;
-  }
-  
+    .main {
+        padding-top: 30px;
+        font-size: 15px;
+        margin: 0;
+        width: 100%;
+        height: 900px;
+    }
+
+    .main textarea {
+        width: 94%;
+    }
+
+    .de h1 {
+        padding-top: 0px;
+    }
+
+    .content {
+        padding: 0 30px;
+        width: 100%;
+        clear: both;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        height: 30px;
+    }
+
+    #encrypt-text {
+        margin-top: 10px;
+    }
+
 }
