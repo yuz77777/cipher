@@ -19,10 +19,13 @@ a {
 }
 
 textarea {
-    width: 80%;
+    width: 97%;
     height: 100px;
     font-size: 120%;
-    border: #91989F solid;
+}
+
+.de p {
+    margin-bottom: 40px;
 }
 
 .main {
