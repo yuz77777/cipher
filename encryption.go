@@ -6,9 +6,9 @@ import (
 	"time"
 )
 
-func Encryption(s string) string {
+func encryption(s string) string {
 	sl := strings.Split(s, "")
-	len := len(sl)
+	l := len(sl)
 	var cipher string
 	var idNumber int
 	var keyStr string
@@ -187,7 +187,7 @@ func Encryption(s string) string {
 	rand.Seed(time.Now().UnixNano())
 	key := rand.Intn(82)
 
-	for i := 0; i < len; i++ {
+	for i := 0; i < l; i++ {
 		idNumber = stoi[sl[i]]
 		idNumber += key
 		idNumber %= 83

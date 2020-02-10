@@ -1,4 +1,4 @@
-module cipher
+module github.com/yuzuy/mapher
 
 go 1.12
 

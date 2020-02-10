@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func Decryption(s string) string {
+func decryption(s string) string {
 	sl := strings.Split(s, "")
 	length := len(sl)
 	var text string
